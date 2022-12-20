@@ -1,3 +1,3 @@
 # 741-workflow-tests
 
-Hello world 2
+Hello world
