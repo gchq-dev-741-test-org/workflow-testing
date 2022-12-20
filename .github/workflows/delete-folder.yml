@@ -1,15 +1,14 @@
 name: Delete folder
 
-on: 
-  delete:
-    branches:
+on: delete
 
 jobs:
   delete-folder:
     runs-on: ubuntu-latest
+    if: github.event.ref_type == 'branch'
     steps:
       - name: Extract branch name
-        run: echo "branch=${GITHUB_HEAD_REF#refs/heads/}" >> $GITHUB_OUTPUT
+        run: echo "branch=${github.event.ref#refs/heads/}" >> $GITHUB_OUTPUT
         id: extract_branch
 
       - name: Remove and commit
