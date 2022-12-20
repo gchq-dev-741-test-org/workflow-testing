@@ -9,11 +9,10 @@ jobs:
       - name: Extract branch name
         run: echo "branch=${GITHUB_HEAD_REF#refs/heads/}" >> $GITHUB_OUTPUT
         id: extract_branch
-        
-      - run: echo ${{ steps.extract_branch.outputs.branch }}
 
       - name: Remove and commit
         uses: EndBug/add-and-commit@v9.1.1
+        if: ${{ steps.extract_branch.outputs.branch != '' }}
         with:
           add: ""
           remove: ./branches/${{ steps.extract_branch.outputs.branch }}
