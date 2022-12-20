@@ -23,7 +23,7 @@ jobs:
         if: ${{ steps.extract_branch.outputs.branch != '' }}
         with:
           add: ""
-          remove: ./branches/${{ steps.extract_branch.outputs.branch }}
+          remove: ./branches/${{ steps.extract_branch.outputs.branch }} -r
           push: false
           message: |
             Branch: ${{ steps.extract_branch.outputs.branch }} deleted from repo
