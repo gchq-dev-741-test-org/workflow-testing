@@ -1,6 +1,8 @@
 name: Delete folder
 
-on: delete
+on: 
+  delete:
+    branches:
 
 jobs:
   delete-folder:
