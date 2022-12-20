@@ -12,7 +12,6 @@ jobs:
 
       - name: Remove and commit
         uses: EndBug/add-and-commit@v9.1.1
-        if: ${{ steps.extract_branch.outputs.branch != "" }}
         with:
           add: ""
           remove: ./branches/${{ steps.extract_branch.outputs.branch }}
