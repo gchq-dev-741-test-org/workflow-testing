@@ -1,4 +1,4 @@
-name: Add QA link to issues on successful build
+name: Comment on PR
 
 on:
   pull_request:
