@@ -1,8 +1,8 @@
 name: 'Issue States'
 
 on:
-  project_card:
-    types: [created, edited, moved]
+  project_v2_item:
+    types: reordered
 
 permissions:
   repository-projects: read
@@ -16,4 +16,3 @@ jobs:
       - uses: dessant/issue-states@v3
         with:
           closed-issue-columns: 'Done'
-          github-token: ${{ secrets.DELETE_FOLDER_TOKEN }}
