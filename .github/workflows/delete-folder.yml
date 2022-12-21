@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          repository: GCHQ-Developer-741/test-repo
+          repository: gchq-dev-741-test-org/test-repo
           token: ${{ secrets.DELETE_FOLDER_TOKEN }}
 
       - name: Remove and commit
