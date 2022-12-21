@@ -1,8 +1,8 @@
 name: 'Issue States'
 
 on:
-  project_v2_item:
-    types: reordered
+  project_card:
+    types: moved
 
 permissions:
   repository-projects: read
