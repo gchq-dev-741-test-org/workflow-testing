@@ -16,3 +16,4 @@ jobs:
       - uses: dessant/issue-states@v3
         with:
           closed-issue-columns: 'Done'
+          github-token: ${{ secrets.DELETE_FOLDER_TOKEN }}
