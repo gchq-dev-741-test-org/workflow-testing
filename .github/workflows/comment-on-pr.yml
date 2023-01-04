@@ -4,13 +4,14 @@ on:
   pull_request:
     types:
       - opened
+    
 
 jobs:
   add-comment:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
-    if: github.event.pull_request.head.repo.name == 'workflow-testing'
+    if: github.event.pull_request.base.repo.name == 'workflow-testing'
     steps:
       - name: Extract branch name
         run: echo "branch=${GITHUB_HEAD_REF#refs/heads/}" >> $GITHUB_OUTPUT
