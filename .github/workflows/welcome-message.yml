@@ -8,7 +8,7 @@ on:
 jobs:
   welcome-message:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.head.repo.full_name !== gchq-dev-741-test-org/workflow-testing
+    if: github.event.pull_request.head.repo.full_name != gchq-dev-741-test-org/workflow-testing
     steps:
       - uses: actions/first-interaction@v1
         with:
