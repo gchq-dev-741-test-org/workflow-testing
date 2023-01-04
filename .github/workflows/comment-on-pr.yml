@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       pull-requests: write
-    if: github.event.pull_request.base.repo.name == 'workflow-testing'
+    if: github.event.pull_request.head.repo.full_name == 'gchq-dev-741-test-org/workflow-testing'
     steps:
       - name: Extract branch name
         run: echo "branch=${GITHUB_HEAD_REF#refs/heads/}" >> $GITHUB_OUTPUT
